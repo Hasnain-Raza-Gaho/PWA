@@ -1,0 +1,81 @@
+Pwa(Progressive Web App)=>allow to install into mobile native app
+1)Go Console and select Light House and select Pwa Only and then Generate Report
+2)First Select Img Icon For App
+3) Change into favicon
+4)Download Favicon Folder 
+5)file extract into project public folder  Files
+6)update public=>
+index.html 
+link of icon: 
+    <link rel='shorcut icon' href="fav.icon"/>
+
+
+
+7)update mainfest.json
+"icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "maskable.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose":"any maskable"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    },
+    {
+      "src": "logo384.png",
+      "type": "image/png",
+      "sizes": "384x384"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+search : mainfest generator : 
+and copy and paste code and add icon 
+maskable.app/editer
+8)Generate maskable icon : download and add icon data and purpose key
+
+=> do changing in manifest .json... https://app-manifest.firebaseapp.com/
+copy and paste
+{
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "browser",
+  "scope": "/",
+  "start_url": "/"
+}
+copy paste in manifest .json
+
+9)Make New Project For Get Services Worker File
+commad : npx create-react-app myapp --template cra-template-pwa
+10)Copy File ServiceWorker.js,serviceWorkerRegistration.js and paste into main folder =>src
+11)Copy Link index.js From New App ServiceWorker and paste in to index.js
+12)then change into unregister to register
+13)then run command: npm run build
+14)install global surge : npm i serve -g
+15)last command :
+serve -s build (5000)
+
+
+
+
+
+192
+logo
+256
+384
+512
